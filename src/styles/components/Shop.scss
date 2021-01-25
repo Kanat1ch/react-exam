@@ -1,0 +1,107 @@
+$main_bg: #2A3638;
+$text_color: #FECEA8;
+$white: #fff;
+$red: #E84A5F;
+$light_red: #ff847C;
+
+.Shop {
+
+  &__root {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &>div {
+      width: calc(50% - 1rem);
+    }
+  }
+
+  &__add {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    input {
+      margin-right: 1rem;
+      max-width: 200px;
+    }
+  }
+
+  &__content {
+    
+    .ant-table {
+      table{
+          thead {
+            tr {
+              th {
+                &:last-child {
+                  text-align: right;
+                }
+              }
+            } 
+          }
+        tbody {
+          .active {
+            &>td {
+              background-color: rgba(190, 245, 190, 0.7);
+            }
+          }
+          .disabled {
+            &>td {
+              background-color: $white;
+            }
+          }
+        }
+      }
+      input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+      span {
+        height: 20px;
+        vertical-align: top;
+      }
+    }
+
+    .column-actions {
+      text-align: right;
+
+      .ant-btn-danger {
+        background-color: #fff;
+        border: 1px solid red;
+        color: red;
+
+        &:hover {
+          background-color: rgba(255, 0, 0, 0.7);
+          border: 1px solid red;
+          color: #fff;
+        }
+      }
+      button {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.ant-modal-content {
+  .modal__content {
+    span {
+      margin-left: 10px;
+      vertical-align: top;
+    }
+    input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.modal {
+  input {
+    margin-bottom: 1rem;
+  }
+}
